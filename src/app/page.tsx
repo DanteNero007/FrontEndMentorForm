@@ -18,15 +18,15 @@ export default function Home() {
 
   return (
     
-    <div className='flex items-center h-screen w-screen'>
+    <div className=' block bg-black lg:bg-white  lg:flex  items-center h-screen w-screen'>
 
-    <div className=" bg-black w-[450px] h-screen" >
+    <div className=" bg-black w-[450px] h-screen overflow-hidden" >
     <div className=" h-full w-full ">
       
       {multis.map((multi) =>{
         return(
           <>
-          <div key={multi} className="text-2xl tracking-widest " >
+          <div key={multi} className="text-2xl tracking-widest" >
           <DanLetter  /><DanLetter /><DanLetter /> <br />
           </div>
           
@@ -67,8 +67,8 @@ export default function Home() {
       </div>
     </div>
   
-  <main className="w-full h-full flex items-center justify-center bg-[#cdcdcd]">
-    <div className=" flex items-center bg-white-100 ">
+  <main className="w-full h-full flex items-start justify-center bg-[#cdcdcd] lg:items-center">
+    <div className=" flex items-center bg-white-100 absolute mt-6 ">
      <Form/>
       </div>   
    </main>
