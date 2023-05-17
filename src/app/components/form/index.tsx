@@ -1,9 +1,11 @@
 "use client"
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from 'zod'
 import {useForm, SubmitHandler} from 'react-hook-form'
-import { useEffect, useState } from "react"
+import {useEffect, useState } from "react"
 
+ 
 
 
 const formSchema = z.object({
@@ -14,12 +16,12 @@ const formSchema = z.object({
   CVC:z.string().max(3,{message:"maximum number is three "}).min(3,{message:"minimum 3 numbers"}),
 })
 
-type formType = z.infer<typeof formSchema>
+export type formType = z.infer<typeof formSchema>
 
 export function Form(){
 
   const [dataForm, setDataForm] = useState<formType>()
-  
+ 
 const { 
   watch,
   register, 
@@ -88,7 +90,7 @@ console.log(cardName)
             
           <button className=" text-white font-bold rounded-lg w-full bg-rose-500 p-2 transition duration-500 hover:bg-rose-400 hover:shadow-lg hover:shadow-rose-500" >Confirm</button>
       </form>
-      <p>{dataForm?.cardName}</p>
+      {dataForm}
     </>
   )
 }

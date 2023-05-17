@@ -1,7 +1,8 @@
 import { Form } from "./components/form"
 import { Card } from "./components/card"
 import { DanLetter } from "./components/DanLetter"
- 
+
+
 export default function Home() {
   const multis = [0,1,2,3,4,5,6,7,8,9,10,
     0,1,2,3,4,5,6,7,8,9,10,
@@ -17,7 +18,7 @@ export default function Home() {
   ]
 
   return (
-    
+   
     <div className=' block bg-black lg:bg-white  lg:flex  items-center h-screen w-screen'>
 
     <div className=" bg-black w-[450px] h-screen overflow-hidden" >
@@ -69,12 +70,13 @@ export default function Home() {
   
   <main className="w-full h-full flex items-start justify-center bg-[#cdcdcd] lg:items-center">
     <div className=" flex items-center bg-white-100 absolute mt-6 ">
-     <Form/>
+     <Form />
       </div>   
    </main>
 
     </div>
    
+  
    
     )
 
